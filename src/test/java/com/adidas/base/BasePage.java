@@ -7,14 +7,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public abstract class BasePage extends TestBase {
+public class BasePage  {
 
 
     public BasePage(){//constructor
         PageFactory.initElements(Driver.get(),this);
+
     }
 
-    @FindBy(linkText = "Home ")
+    //public WebDriver driver=Driver.get();
+    public WebDriverWait wait;
+    @FindBy(partialLinkText = "Home")
     public WebElement home;
 
     @FindBy(linkText = "Cart")
