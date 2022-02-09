@@ -33,7 +33,7 @@ public class PurchaseTest extends TestBase {
         String[] dropList=new String[]{"Dell i7 8gb","Apple monitor 24"};
 
         for (String dropItem : dropList) {
-            expectedAmount-=cartPage.productRemover(dropItem);
+            expectedAmount-=cartPage.productRemover(dropItem,wait);
         }
         Assert.assertEquals(Integer.parseInt(cartPage.actualAmount.getText()),expectedAmount, "PRICE LIST IS WRONG");
         System.out.println("expectedAmount = " + expectedAmount);

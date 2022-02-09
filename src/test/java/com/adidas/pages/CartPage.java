@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CartPage extends BasePage {
     @FindBy(id = "name")
@@ -31,7 +32,7 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//h3[@id='totalp']")
     public WebElement actualAmount;
 
-    public int productRemover(String product){
+    public int productRemover(String product, WebDriverWait wait){
         cart.click();
         String productPath = "//td[.='"+product+"']"; //string concatenation to get dynamically locator
         String productPricePath = productPath+"/../td[3]";
@@ -42,8 +43,8 @@ public class CartPage extends BasePage {
 
         // delete the product
         Driver.get().findElement(By.xpath(deletePath)).click();
-        //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(productPath)));
-        BrowserUtils.waitFor(2);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(productPath)));
+        //BrowserUtils.waitFor(2);
         return Integer.parseInt(priceText);
     }
     public void fillForm(){
