@@ -69,7 +69,7 @@ public abstract class TestBase  {
 
         driver= Driver.get(); //this is enough to initialize the driver object
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);//IMPLICIT WAITING
-        wait=new WebDriverWait(driver, 20);//EXPLICIT WAITING
+        wait=new WebDriverWait(driver, 5);//EXPLICIT WAITING
 
         driver.get(url);// baglanacagimiz webpage e burdan gidiyoruz
         driver.manage().window().maximize();

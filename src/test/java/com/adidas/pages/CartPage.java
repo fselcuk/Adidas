@@ -19,18 +19,20 @@ public class CartPage extends BasePage {
     public WebElement city;
     @FindBy(id = "card")
     public WebElement card;
-    @FindBy(id = "mont")
+    @FindBy(id = "month")
     public WebElement month;
     @FindBy(id = "year")
     public WebElement year;
-    @FindBy(linkText = "Purchase")
+    @FindBy(xpath = "//button[.=\"Purchase\" and @class='btn btn-primary']")
     public WebElement Purchase;
-    @FindBy(linkText = "OK")
+    @FindBy(xpath = "//div[@class=\"sa-confirm-button-container\"]")
     public WebElement OK;
-    @FindBy(linkText = "Thank you for your purchase!")
+    @FindBy(xpath = "//p[@class=\"lead text-muted \"]")
     public WebElement confirmation;
     @FindBy(xpath = "//h3[@id='totalp']")
     public WebElement actualAmount;
+    @FindBy(xpath = "//button[@class='btn btn-success' and .=\"Place Order\"]")
+    public WebElement placeOrder;
 
     public int productRemover(String product, WebDriverWait wait){
         cart.click();
