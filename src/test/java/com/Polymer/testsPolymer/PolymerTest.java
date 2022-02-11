@@ -1,6 +1,9 @@
 package com.Polymer.testsPolymer;
 
-public class PolymerTest {
+import com.Polymer.basePolymer.TestBasePolymer;
+import org.testng.annotations.Test;
+
+public class PolymerTest extends TestBasePolymer {
 
     /*
     TASK:
@@ -12,4 +15,9 @@ click within the JavaScript tab, and select the Polymer link.
 The second step should be: Add two Todo items
 Bonus: (optional stretch goal): Edit the content of the second Todo item
      */
+
+    @Test
+    public void test(){
+        //we connect to our Polymer Website
+    }
 }
