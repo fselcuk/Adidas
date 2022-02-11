@@ -18,6 +18,6 @@ Bonus: (optional stretch goal): Edit the content of the second Todo item
 
     @Test
     public void test(){
-        //we connect to our Polymer Website
+        //we connect to our Polymer Website,,,
     }
 }
