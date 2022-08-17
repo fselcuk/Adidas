@@ -29,7 +29,7 @@ public class PurchaseTest extends TestBase {
     @Test
     public void Test1(){
 
-       extentLogger=report.createTest("adding anf removing product test/adidas");
+       extentLogger=report.createTest("adding and removing product test/adidas");
 
        extentLogger.info("adding items to cart");
        String [][] purchaseList=new String[][]{{"Laptops","Sony vaio i5"},{"Laptops","Dell i7 8gb"},{"Monitors","Apple monitor 24"},{"Phones","Nexus 6"}};
@@ -50,7 +50,7 @@ public class PurchaseTest extends TestBase {
 
 
         //after ready your items in the cart we need to click Place Order button to fill customer info
-        wait = new WebDriverWait(Driver.get(),5);
+        wait = new WebDriverWait(Driver.get(),1);
         BrowserUtils.waitFor(3);
 
         extentLogger.info("click on Place Order button");

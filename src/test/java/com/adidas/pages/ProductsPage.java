@@ -36,7 +36,7 @@ public class ProductsPage extends BasePage {
         addToCart.click();
 
         // sometimes webpage gives no such ALert exception so we are waiting dynamically
-        wait = new WebDriverWait(Driver.get(),10);
+        wait = new WebDriverWait(Driver.get(),4);
         wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = Driver.get().switchTo().alert();
         alert.accept();

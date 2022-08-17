@@ -12,12 +12,12 @@ public class BasePage  {
 
     public BasePage(){//constructor
         PageFactory.initElements(Driver.get(),this);
-
+        //POM Structure
+//pagefactory class comes from selenium. we are initializing our page
     }
 
-    //public WebDriver driver=Driver.get();
     public WebDriverWait wait;
-    @FindBy(partialLinkText = "Home")
+    @FindBy(partialLinkText = "Home") //used instead of find element method
     public WebElement home;
 
     @FindBy(linkText = "Cart")
